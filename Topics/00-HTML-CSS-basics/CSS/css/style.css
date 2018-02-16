@@ -1,0 +1,16 @@
+body {
+	margin: 20px;
+}
+
+header{
+	width: 100%;
+	min-height: 50px;
+	background-color: #111111;
+	color: #ffffff;
+	text-align: center;
+}
+
+section > header {
+	background-color: #546554;
+}
+

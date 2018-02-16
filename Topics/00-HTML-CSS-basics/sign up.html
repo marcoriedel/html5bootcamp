@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8"/>
+ 	<meta name="description" content="SignUp form created">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="Marco Riedel">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>sign up</title>
+<script>
+		function clearForm() {
+		    document.getElementById("signUp").reset();
+		}
+</script>
+
+</head>
+<body>
+	<div style="text-align: center;">
+<h2>Sign up Form</h2>
+<form id="signUp">
+
+<label>First Name</label> <input type="text" required name="firstName"><br/><br/>
+<label>Last Name</label> <input type="text" required name="lastName"><br/><br/>
+<label>Email</label> <input type="email" required name="email"><br/><br/>
+<label>Birthday</label> <input type="date" name="birthday"><br/><br/>
+<label>Small Bio</label><br/> <textarea cols="20" rows="5" name="bio"></textarea><br/><br/>
+<label>Favorite Sport</label> <select>
+								<option>Soccer</option>
+								<option>Tennis</option>
+								<option>Basket</option>
+								</select><br/><br/>
+
+<button type="submit">Send</button>
+	
+<input type="button" onclick="clearForm()" value="Clear form">						
+
+
+
+</form>
+</div>
+</body>
+</html>
