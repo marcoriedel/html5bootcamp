@@ -47,7 +47,7 @@ html,body{
 
 article{
 	background: #867968;
-	height: 29%;
+	height: 58%;
 	margin: 2px;
 }
 
@@ -71,3 +71,11 @@ section > .footer{
 	font-size: 10px;	
 }
 
+
+[class*="a"] {
+    background: blue;
+}
+
+[class$="r"] {
+    background: magenta;
+}
