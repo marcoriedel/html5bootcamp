@@ -1,0 +1,84 @@
+body, html  h2{
+margin: 0;
+padding: 0;
+
+
+}
+
+h2{
+	text-align: center;
+}
+body {
+text-align: center;
+}
+
+.row{
+	width: 90%;
+	margin: 2% auto;
+	overflow: hidden;
+
+}
+
+.column{
+	background:lightblue;
+	box-sizing: border-box;
+	float: left;
+	margin-right: 2%;
+	padding: 1em;
+}
+
+.one-column .column{
+	width: 100%;
+}
+
+.two-columns .column{
+	width: 49%;
+}
+.two-columns .column:nth-child(2n){
+margin-right: 0;
+}
+
+.three-columns .column{
+	width: 32%;
+}
+.three-columns .column:nth-child(3n){
+margin-right: 0;
+}
+
+.four-columns .column{
+	width: 23.5%;
+}
+.four-columns .column:nth-child(4n){
+margin-right: 0;
+}
+
+.six-columns .column{
+	width: 15%;
+}
+.six-columns .column:nth-child(6n){
+margin-right: 0;
+}
+
+.twelve-columns .column{
+	width: 6.5%;
+}
+.twelve-columns .column:nth-child(12n){
+margin-right: 0;
+}
+
+.right-sidebar .sidebar, 
+.left-sidebar .sidebar {
+	width: 23.5%;
+}
+.right-sidebar .content,
+.left-sidebar .content {
+	width: 74.5%;
+}
+
+.right-sidebar .sidebar{
+	margin-right: 0;
+}
+
+.left-sidebar .content {
+	margin-right: 0;
+}
