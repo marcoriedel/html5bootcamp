@@ -38,6 +38,18 @@ text-align: center;
 margin-right: 0;
 }
 
+.title{
+	width: 32%;
+}
+
+.description{
+	width: 66%;
+}
+
+.title-columns .description{
+	margin-right: 0;
+}
+
 .three-columns .column{
 	width: 32%;
 }
@@ -82,3 +94,5 @@ margin-right: 0;
 .left-sidebar .content {
 	margin-right: 0;
 }
+
+
