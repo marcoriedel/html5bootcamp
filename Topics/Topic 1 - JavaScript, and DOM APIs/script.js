@@ -5,8 +5,24 @@ window.onload = function preloader() {
  function alertMsg(){
  	alert("Alert Message");
  }
+;
 
-function apiCall() {
+function ajaxCall(){
+	config = new config('get','http://api.icndb.com/jokes/random',true);
+	apiCall(config);
+}
+
+function config(type,url,sinc)
+{
+   this.Type = type;
+   this.Url  = url;
+   this.Sinc = sinc;
+ }
+
+
+
+function apiCall(config) {
+	
 
 	var request = new XMLHttpRequest();
 	
@@ -20,6 +36,6 @@ function apiCall() {
         }
     }
 	};
-	request.open("GET", 'http://api.icndb.com/jokes/random' , true);
+	request.open(config.Type, config.Url , config.Sinc);
 	request.send(null);
 }
