@@ -9,7 +9,13 @@ window.onload = function preloader() {
 
 function ajaxCall(){
 	config = new config('get','http://api.icndb.com/jokes/random',true);
-	apiCall(config);
+    
+    get().then(function(response) {
+        document.getElementById('hidden').innerHTML = response;
+        console.log(response);
+      }, function(error) {
+        console.error("Failed!", error);
+      })
 }
 
 function config(type,url,sinc)
@@ -19,11 +25,8 @@ function config(type,url,sinc)
    this.Sinc = sinc;
  }
 
-
-
 function apiCall(config) {
 	
-
 	var request = new XMLHttpRequest();
 	
 	request.onreadystatechange = function() {
@@ -39,3 +42,34 @@ function apiCall(config) {
 	request.open(config.Type, config.Url , config.Sinc);
 	request.send(null);
 }
+
+function get() {
+    
+    return new Promise(function(resolve, reject) {
+      
+      var req = new XMLHttpRequest();
+      req.open('get','http://api.icndb.com/jokes/random',true);
+  
+      req.onload = function() {
+        if (req.status == 200) {
+      
+          resolve(req.responseText);
+        }
+        else {
+          
+          reject(document.getElementById('hidden').className = 'apiError');
+        }
+      };
+  
+      
+      req.onerror = function() {
+        reject(Error("Network Error"));
+      };
+        
+      req.send();
+    });
+  }
+  
+
+
+
