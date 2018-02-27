@@ -1,0 +1,18 @@
+body,html {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.header {
+	font-size: 80px;
+}
+
+td{
+	font-size: 2rem;
+	border: solid;
+}
+
+table{
+	border: solid;
+}
